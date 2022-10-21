@@ -41,4 +41,26 @@ export class UsersService {
     .set('page-option','100');
     return this.http.get<users>('https://jsonplaceholder.typicode.com/users',{headers :header, params:param});
   }
+
+  updateUser(){
+    // const header = new HttpHeaders({
+    //   'content-type':'application/form',
+    //   'authenticationToken':'12345',
+    //   'userId':'testinguser'
+    // });
+
+    // const param = new HttpParams()
+    // .set('page-size','10')
+    // .set('page-option','100');
+
+    const putbody = {
+      name :'kripa',
+      userId:1
+    }
+    return this.http.put('https://jsonplaceholder.typicode.com/users/1',putbody)
+    // return this.http.put('https://jsonplaceholder.typicode.com/users/1',putbody,{headers:header,params:param})
+  }
+  deleteusers(id:number){
+  return this.http.delete('https://jsonplaceholder.typicode.com/users/'+id)
+}
 }

@@ -7,6 +7,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./customer.component.css']
 })
 export class CustomerComponent implements OnInit {
+
   constructor( private usersService :UsersService) { }
   users:any;
   name="";
@@ -35,8 +36,17 @@ export class CustomerComponent implements OnInit {
   ngOnInit(): void {
     this.usersService.getUsers().subscribe(data => { this.users = data; },(err)=>{
       console.log('unable to get data form URL');
+      this.usersService.updateUser()
       
     });
+  }
+  updateUser(){
+    this.usersService.updateUser().subscribe(data=>{console.log(data)});
+  
+  }
+
+  deleteuser(){
+    this.usersService.deleteusers(1).subscribe(data=>{console.log("successful deletion"+data)},(err)=>{console.log("unable to delete")});
   }
 
 }

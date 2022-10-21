@@ -40,3 +40,19 @@ button{
     color: #fff;
     
 }
+.put button{
+    display:block;
+    width:30%;
+    margin:3rem;
+    font-size: 1rem;
+    padding:1rem;
+    background-color: orange;
+}
+.delete button{
+    display:block;
+    width:30%;
+    margin:3rem;
+    font-size: 1rem;
+    padding:1rem;
+    background-color: yellow;
+}
