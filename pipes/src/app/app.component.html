@@ -1,0 +1,42 @@
+<h1>CUSTOM PIPES: </h1>
+<section class="table1">
+<table>
+  <tr>
+    
+<th><h2> Reverse : </h2><br>
+<input type="text" [(ngModel)]="reverses"></th>
+<th><h2> Uppercase : </h2><br>
+<input type="text" [(ngModel)]="upper"></th>
+<th><h2> Chaining : </h2><br>
+<input type="text" [(ngModel)]="chain"></th>
+</tr>
+<tr>
+  <td><h2>{{reverses | reverse}}</h2></td>
+  <td><h2>{{upper | uppercase}}</h2></td>
+  <td><h2>{{chain | reverse | lowercase}}</h2></td>
+</tr> 
+</table>
+</section>
+
+<section class="table2">
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Dob</th>
+    <th>Age</th>
+    <th>Detail</th>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.Dob | date: 'dd/MM/yyyy'}}</td>
+    <td>{{user.Dob | age }}</td>
+    <td>{{ user.detail |detailpipe : user.id : user.name : (user.Dob | date: 'dd/MM/yyyy' ) }}</td>
+
+  </tr>
+
+</table>
+
+  
+</section>

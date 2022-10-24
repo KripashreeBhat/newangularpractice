@@ -1,0 +1,28 @@
+/* h1{ */
+    /* text-align: center;
+    padding: 5rem;
+} */
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+.table1 table th{
+    padding:2rem;
+    background: palevioletred;
+    color: #fff;
+    text-align: center;
+}
+table td{
+    padding: 2rem;
+}
+.table2{
+    margin-top: 2rem;
+}
+.table2 table th{
+    background-color: lightseagreen;
+}
+
+.table1 th input{
+    height:25px;
+}
