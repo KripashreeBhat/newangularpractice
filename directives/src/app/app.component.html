@@ -1,0 +1,63 @@
+<div class="container1">
+<h3>Structural directives:</h3>
+<section>
+<div class="text"  >
+  <h4>ngIf directive</h4>
+  <input type="text" [(ngModel)]="name" ><br>
+
+  <p *ngIf="name=='kripa';then name1 ; else error" ></p>
+  <ng-template #name1>
+    <div class="msg1">
+    welcome 
+  </div>
+  </ng-template>
+  <ng-template #error>
+    <div class="msg2">
+    Oops! Invalid user
+  </div>
+  </ng-template>
+</div>
+</section>
+
+<section class="text">
+  <h4>ngFor directive</h4>
+  <div class="dropdown">
+  <label for="favfood"> Fav cuisines</label>
+  <select name="favfood" id="favfood" [(ngModel)]="favfood">
+    <option value="favfood" *ngFor="let food of favfood">{{food}}</option>
+  </select>
+</div>
+</section>
+
+<section class="text">
+  <h4>ngSwitch directive</h4>
+  <label> case:</label>
+  <input type="text" [(ngModel)]="day">
+  <div [ngSwitch]="day" class="switch">
+    <div *ngSwitchCase="1">Monday</div>
+    <div *ngSwitchCase="2">Tuesday</div>
+    <div *ngSwitchCase="3">Wednesday</div>
+    <div *ngSwitchCase="4">thursaday</div>
+    <div *ngSwitchCase="5">Friday</div>
+    <div *ngSwitchCase="6">saturday</div>
+    <div *ngSwitchCase="7">Sunday</div>
+    <div *ngSwitchDefault><small>Enter the number between [1-7]</small></div>
+  </div>
+</section>
+</div>
+  
+<div class="container2">
+  <h3>Attribute directives:</h3>
+  <section class="text">
+    <h4>NgStyle directive:</h4>
+    <p [ngStyle]="ApplyStyles()">Style Applied</p>
+  </section>
+  <section class="text">
+    <p [ngClass]='applyClasses()'>Style Applied Using Class</p>
+  </section>
+</div>
+
+<div class="container3">
+  <h3>Custom directives:</h3>
+  <button appCustomDirective>custom</button>
+</div>

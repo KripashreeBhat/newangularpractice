@@ -1,0 +1,66 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.container1,.container2,.container3{
+    border: 2px darkblue solid;
+    padding: 20px;
+    display: block;
+    margin-right:60%;
+    background-color: rgb(218, 147, 54);
+
+}
+.text {
+border : 1px #333 solid;
+margin-right:30%;
+margin-top:2rem;
+display: block;
+padding:10px 20px;
+text-align: center;
+background-color: #fff;
+}
+.text input{
+    margin:10px 0px;
+    text-align: center;
+    
+}
+.text .msg1{
+    color:green;
+}
+ .msg2{
+    color: red;
+}
+.dropdown,.switch{
+    padding-top:10px;
+}
+section{
+    text-align: center;
+    
+}
+.container2,.container3{
+    background-color: black;
+    color:white;
+    margin-top:2rem;
+}
+.container2 .text{
+    color:#000
+}
+.container2 p{
+    padding-top: 10px;
+}
+.boldClass{  
+    font-weight:bold;  
+      font-size : 30px;
+      color:orange;   
+}  
+
+.container3{
+    background-color: purple;
+}
+.container3 button{
+    padding: 20px;
+    text-align: center;
+    margin-left:25%;
+    margin-top:2rem;
+}
+
