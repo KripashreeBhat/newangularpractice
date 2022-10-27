@@ -6,7 +6,8 @@
 </div>
 
 <div class="form" >
-    <form action="" #form ="ngForm" (submit)="addinfo(form)">
+    <!-- <form action="" #form ="ngForm" (submit)="addinfo(form)"> -->
+        <form action="" #form ="ngForm" >
         <h3>Post method:</h3>
         <label for="name">Name:</label>
         <input type="text" [(ngModel)]="name" name="name" >
@@ -16,7 +17,7 @@
         <textarea [(ngModel)]="address" name="address"></textarea><br>
         <div class="check">
         <input type="checkbox" [(ngModel)]="terms" name="terms"> Accept</div>
-        <button type="submit">AddInfo</button>
+        <button type="submit" (click)="addEmployee(empDetails)">AddInfo</button>
     </form>
     
 </div>

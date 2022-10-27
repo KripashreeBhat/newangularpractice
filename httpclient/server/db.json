@@ -1,0 +1,15 @@
+{
+    "employees": [{
+      
+      "name": "Tony Stark",
+      "email": "tony@mcu.com",
+      "phone": "hassana",
+      "terms": true
+    }, {
+      
+      "name": "Black Widow",
+      "email": "black-widow@mcu.com",
+      "address": "bengaluru",
+      "terms":true
+    }]
+  }
