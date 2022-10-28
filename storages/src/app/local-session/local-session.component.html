@@ -1,0 +1,31 @@
+<ng-container *ngIf="display">
+<h4> Data retrieved from session:-{{ssn}}</h4>
+<h4> Data retrieved from local:-{{local}}</h4>   
+</ng-container> 
+<div class="container">
+   
+    <form #form ="ngForm">
+        <h4>{{title}}</h4>
+        
+        <label for="key">KEY:</label>
+        <input type="text" #ke [(ngModel)]="key"  name="key">
+        <label for="key">VALUE:</label>
+        <input type="text"  [(ngModel)]="value" name="value">
+        <button (click)="save()"> SAVE</button>
+        <button (click)="retrive()">RETRIVE</button>
+        <button (click)="remove()">REMOVE</button>
+        <button (click)="clear()">DELETE ALL</button>
+        <br><br>
+        
+<p>Name: {{cookie_name}}</p>
+<p>Cookie Object: {{all_cookies | json}}</p>
+<br>
+<button (click)="setCookie()">Set Cookies</button>
+
+<button (click)="deleteCookie()">Delete</button>
+
+<button (click)="getCookie(ke)">GET</button>
+<button (click)="deleteAll()">Delete All</button>
+    </form>
+</div>
+  

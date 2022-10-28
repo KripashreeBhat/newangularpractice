@@ -16,22 +16,22 @@ export class CustomerComponent implements OnInit {
   terms="";
   address="";
 
-  // addinfo(formvalue:NgForm)
+  addinfo(formvalue:NgForm){
   // addinfo(body:any){
-  //   // console.log(formvalue.value);
-  //   // const postbody ={
-  //   //   title: formvalue.value.name,
-  //   //   body:  formvalue.value.address
+    console.log(formvalue.value);
+    const postbody ={
+      title: formvalue.value.name,
+      body:  formvalue.value.address
     
-  //   // }
-  //   this.usersService.addInfo(body).subscribe(data=>{
-  //     console.log(data);
+    }
+    this.usersService.addInfo(postbody).subscribe(data=>{
+      console.log(data);
       
-  //   },(err)=>{
-  //     console.log("unable to add info" +err);
+    },(err)=>{
+      console.log("unable to add info" +err);
       
-  //   });
-  // }
+    });
+  }
  
   
  
@@ -43,10 +43,10 @@ export class CustomerComponent implements OnInit {
       
     });
   }
-  addEmployee(dataEmployee:any){
-   return this.usersService.createEmployee(this.empDetails).subscribe((data:{})=>{console.log(data);
-    })
-  }
+  // addEmployee(dataEmployee:any){
+  //  return this.usersService.createEmployee(this.empDetails).subscribe((data:{})=>{console.log(data);
+  //   })
+  // }
   updateUser(){
     this.usersService.updateUser().subscribe(data=>{console.log(data)});
   
